@@ -1,9 +1,29 @@
-/* Скрываем блок донор  */
-.ConstructorBlock__container--22e84a {
-    display: none !important;
+/* Кнопка регистрации */
+.SignUpButton__linkButton--b0a339 {
+    color: #ffffff!important;
+    border-image: url(https://noiseless-fix-css.surge.sh/reg_button_greek_colors_v3.png) 77 fill / 77px stretch;
+    min-width: 100px!important;
+    background: none !important;
+    text-shadow: 0px 1px 5px rgb(57 55 55) !important;
+    animation: pulse 1.5s infinite!important;
+    border-radius: 8px!important;   
+}
+@keyframes pulse {
+0% {
+    -webkit-box-shadow: 0 0 5px 0 #F8E09C;
+    box-shadow: 0 0 5px 0 #F8E09C;
 }
 
-/* Стиль плашки  */
+70% {
+    -webkit-box-shadow: 0 0 5px 8px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 5px 8px rgba(204, 169, 44, 0);
+}
+100% {
+    -webkit-box-shadow: 0 0 5px 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 5px 0 rgba(204, 169, 44, 0);
+}
+}
+/* Стиль плашки  4*/
 .SliderTypeA__slideSubTitle {
     /* font-size: clamp(1rem, 1.6vw, 1.6em) !important; */
     /* background-color: rgb(0 0 0 / 44%) !important; */
@@ -35,7 +55,6 @@
     text-decoration: none !important;
     font-size: clamp(0.8rem, 1.4vw, 1.2rem) !important;
     color: black !important;
-    /* background: linear-gradient(135deg, #3ac800, #addd17) !important; */
     background: linear-gradient(135deg, #fff4b0 0%, #ffd700 30%, #f9c200 60%, #c99700 100%);
     border: none !important;
     border-radius: 8px !important;
@@ -122,25 +141,56 @@
 
 .GameListItemTypeB__overlay {
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(8px);
-    background-color: rgb(0 0 0 / 21%) !important;
-    background: none !important;
+    -webkit-backdrop-filter: blur(2px);
+    background-color: rgb(0 0 0 / 20%) !important;
 }
 
 .GameListItemTypeB__button_playContainer {
     border: 2px solid #ffffff !important;
 }
-
+/* кнопка Play на слотах */
 .GameListItemTypeB__button_circlePlay {
     top: 50% !important;
     left: 56% !important;
     height: 32px !important;
     width: 32px !important;
+    background: linear-gradient(135deg, #131211 0%, #646464 30%, #1f1f1f 60%, #b1b1b1 100%)!important;
 }
-
+.GameListItemTypeB__title {
+text-shadow: 1px 2px 5px rgb(0 0 0) !important;   
+}
+.GameListItemTypeB__description {
+    color: #fff1cb!important;
+    text-shadow: 1px 2px 5px rgb(0 0 0) !important;
+}
+/* коррекция кнопки демо */
+@media (max-width: 1023.98px) { 
+    body .GameListItemTypeB__button .LinkButton__button_typeSecondary {
+        text-shadow: 1px 2px 5px rgb(0 0 0) !important;
+    }
+}
+/* Фикс тени на карточках слотов */
+body .GameListItemTypeB:not(body .GameListItemTypeB_showBlur):hover {
+     box-shadow: 0px 0px 0px 2.5px #ffffffcf inset, 0px 0px 0px 1.5px #686868b9, 0px 2px 8px 0px rgba(0, 0, 0, 0.20)!important;
+    -webkit-box-shadow: 0px 0px 0px 2.5px #ffffffcf inset, 0px 0px 0px 1.5px #686868b9, 0px 2px 8px 0px rgba(0, 0, 0, 0.20)!important;   
+}   
 /* Фикс карточек слотов тип D  */
 .GameListItemTypeD__overlayBackdrop {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(8px);
     background-color: rgb(0 0 0 / 21%) !important;
+}
+/* Свитчер для мобайла (футер) */
+.RevolverSwitcher__innerSmallWheel--27b14e {
+    background: linear-gradient(135deg, #fff4b0 0%, #ffd700 30%, #f9c200 60%, #c99700 100%)!important;
+        width: 50%!important;
+    height: 50%!important;
+}
+/* скрыть моб кнопку Jivo */
+.__jivoMobileButton {
+ display: none!important;   
+}
+/* смена цвета лоадера при соц. авторизации */
+.Spinner.background-base {
+    background-color: #262626!important;
 }
